@@ -1,3 +1,4 @@
+#Saludo personalizado
 def saludo_personalizado():
     nombre = input("¡Hola! ¿Cómo te llamas? ")
     saludo = f"¡Encantado de conocerte, {nombre}! Bienvenido a nuestro programa."
@@ -9,7 +10,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-
+#Contador de numeros
 def leer_numero():
     while True:
         entrada_usuario = input("Por favor, ingresa un número entero: ")
@@ -31,4 +32,32 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+#Calculadora Basica
+def calculadora():
+    num1 = float(input("Ingresa el primer número: "))
+    num2 = float(input("Ingresa el segundo número: "))
+    operacion = input("Elija una operación (suma, resta, multiplicación, división): ")
+
+    if operacion == "suma":
+        resultado = num1 + num2
+    elif operacion == "resta":
+        resultado = num1 - num2
+    elif operacion == "multiplicación":
+        resultado = num1 * num2
+    elif operacion == "división":
+        if num2 != 0:
+            resultado = num1 / num2
+        else:
+            print("No se puede dividir por cero.")
+            return
+    else:
+        print("Operación no válida.")
+        return
+
+    print(f"El resultado es: {resultado}")
+
+
+if __name__ == "__main__":
+    calculadora()
 
